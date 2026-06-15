@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>MovieLab - Filmes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>MovieLab </h1>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="filmes.html">Filmes</a>
+        <a href="series.html">Séries</a>
+        <a href="sobre.html">Sobre</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="catalogo">
+<article class="card">
+    <img src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/130/2021/08/19085635/gEU2QniE6E77NI6lCU6MxlNBvIx-scaled.jpg" alt="Interestelar">
+
+    <h3>Interestelar</h3>
+    <p>Ficção científica</p>
+
+    <button onclick="toggle(this)">Ver Sinopse</button>
+
+    <p class="sinopse">
+        Em um futuro onde a Terra está se tornando inabitável, um grupo de astronautas é enviado através de um buraco de minhoca em busca de novos planetas que possam garantir a sobrevivência da humanidade.
+    </p>
+</article>
+<article class="card">
+    <img src="https://image.tmdb.org/t/p/original/mI1Ktgg7LuhwAhUgke4rHUxlDUr.jpg" alt="Vingadores Ultimato">
+
+    <h3>Vingadores: Ultimato</h3>
+    <p>Ação / Super-heróis</p>
+
+    <button onclick="toggle(this)">Ver Sinopse</button>
+
+    <p class="sinopse">
+        Após os eventos devastadores causados por Thanos, os Vingadores sobreviventes se unem para tentar reverter as perdas e restaurar o equilíbrio do universo.
+    </p>
+</article>
+<article class="card">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.wGRSHOCXmJFVJfs5kKJOtwHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Titanic">
+
+    <h3>Titanic</h3>
+    <p>Romance / Drama</p>
+
+    <button onclick="toggle(this)">Ver Sinopse</button>
+
+    <p class="sinopse">
+Durante a viagem inaugural do navio Titanic, dois jovens de classes sociais diferentes vivem um grande amor que é testado por uma tragédia histórica no oceano Atlântico.
+    </p>
+</article>
+
+</section>
+
+</main>
+
+<script>
+function toggle(btn) {
+    let sinopse = btn.nextElementSibling;
+    sinopse.style.display = sinopse.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
