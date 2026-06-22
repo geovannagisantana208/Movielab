@@ -1,68 +1,87 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #f8fafc;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
 }
 
-header {
-    background-color: #1e293b;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+background:#1e293b;
+text-align:center;
+padding:20px;
 }
 
-nav a {
-    color: #f8fafc;
-    margin-left: 15px;
-    text-decoration: none;
-    font-weight: bold;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
 }
 
-nav a:hover {
-    color: #ef4444;
-}
-.catalogo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-.card {
-    background-color: #1e293b;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
+.hero{
+text-align:center;
+padding:60px 20px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-.card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-    background-color: #ef4444;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+button{
+background:#ef4444;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
 }
 
-button:hover {
-    background-color: #dc2626;
+.catalogo{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:30px;
 }
 
-.sinopse {
-    display: none;
-    font-size: 14px;
-    margin-top: 10px;
-    color: #cbd5e1;
+.card{
+width:200px;
+background:#1e293b;
+border-radius:10px;
+text-align:center;
+padding:10px;
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.sinopse{
+display:none;
+}
+
+.sobre{
+width:70%;
+margin:30px auto;
+text-align:center;
+}
+.card{
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.5);
+}
+
+.card img{
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+button{
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
 }

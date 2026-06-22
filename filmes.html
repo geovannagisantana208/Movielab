@@ -1,74 +1,85 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>MovieLab - Filmes</title>
+<title>Filmes - MovieLab</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>MovieLab </h1>
+    <h1>MovieLab</h1>
 
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="filmes.html">Filmes</a>
-        <a href="series.html">Séries</a>
-        <a href="sobre.html">Sobre</a>
-    </nav>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="sobre.html">Sobre</a>
+</nav>
+
+
 </header>
 
 <main>
 
 <section class="catalogo">
+
 <article class="card">
-    <img src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/130/2021/08/19085635/gEU2QniE6E77NI6lCU6MxlNBvIx-scaled.jpg" alt="Interestelar">
 
-    <h3>Interestelar</h3>
-    <p>Ficção científica</p>
+<img src="https://th.bing.com/th/id/OIP.uiaj_IMaC7h3NoieAhcmVwHaLG?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Interestelar">
 
-    <button onclick="toggle(this)">Ver Sinopse</button>
+<h3>Interestelar</h3>
 
-    <p class="sinopse">
-        Em um futuro onde a Terra está se tornando inabitável, um grupo de astronautas é enviado através de um buraco de minhoca em busca de novos planetas que possam garantir a sobrevivência da humanidade.
-    </p>
+<p>Ficção Científica</p>
+
+<button onclick="toggle(this)">Ver Sinopse</button>
+
+<p class="sinopse">
+Em um futuro onde os recursos da Terra estão se esgotando, um grupo de astronautas embarca em uma missão pelo espaço para encontrar um novo planeta habitável. Durante a jornada, eles enfrentam desafios científicos, emocionais e descobertas que podem definir o destino da humanidade.
+</p>
+
 </article>
+
 <article class="card">
-    <img src="https://image.tmdb.org/t/p/original/mI1Ktgg7LuhwAhUgke4rHUxlDUr.jpg" alt="Vingadores Ultimato">
 
-    <h3>Vingadores: Ultimato</h3>
-    <p>Ação / Super-heróis</p>
+<img src="data:image/webp;base64,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" alt="Titanic">
 
-    <button onclick="toggle(this)">Ver Sinopse</button>
+<h3>Titanic</h3>
 
-    <p class="sinopse">
-        Após os eventos devastadores causados por Thanos, os Vingadores sobreviventes se unem para tentar reverter as perdas e restaurar o equilíbrio do universo.
-    </p>
+<p>Romance</p>
+
+<button onclick="toggle(this)">Ver Sinopse</button>
+
+<p class="sinopse">
+Durante a viagem inaugural do luxuoso navio Titanic, dois jovens de diferentes classes sociais se apaixonam. Enquanto vivem uma história marcante, precisam enfrentar os desafios impostos pela sociedade e a tragédia que mudaria suas vidas para sempre.
+</p>
+
 </article>
+
 <article class="card">
-    <img src="https://tse2.mm.bing.net/th/id/OIP.wGRSHOCXmJFVJfs5kKJOtwHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Titanic">
 
-    <h3>Titanic</h3>
-    <p>Romance / Drama</p>
+<img src="https://th.bing.com/th/id/OIP.rHIE5t5vMOUZh9ihTf5BygHaLH?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Vingadores">
 
-    <button onclick="toggle(this)">Ver Sinopse</button>
+<h3>Vingadores: Ultimato</h3>
 
-    <p class="sinopse">
-Durante a viagem inaugural do navio Titanic, dois jovens de classes sociais diferentes vivem um grande amor que é testado por uma tragédia histórica no oceano Atlântico.
-    </p>
+<p>Ação</p>
+
+<button onclick="toggle(this)">Ver Sinopse</button>
+
+<p class="sinopse">
+Após uma grande derrota que abalou o universo, os heróis restantes se unem em uma missão decisiva para tentar reverter os acontecimentos e restaurar a esperança. O filme reúne momentos emocionantes, sacrifícios e batalhas épicas.
+</p>
+
 </article>
 
 </section>
 
 </main>
 
-<script>
-function toggle(btn) {
-    let sinopse = btn.nextElementSibling;
-    sinopse.style.display = sinopse.style.display === "block" ? "none" : "block";
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
