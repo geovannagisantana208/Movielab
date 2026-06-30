@@ -1,45 +1,147 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 
-<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>MovieLab</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
 <header>
-    <h1>MovieLab</h1>
 
+    <div class="logo">
+        <i class="fa-solid fa-film"></i>
+        <span>MovieLab</span>
+    </div>
 
-<nav>
-    <a href="index.html">Início</a>
-    <a href="filmes.html">Filmes</a>
-    <a href="series.html">Séries</a>
-    <a href="sobre.html">Sobre</a>
-</nav>
-
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="filmes.html">Filmes</a>
+        <a href="series.html">Séries</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 
 </header>
 
 <main>
 
-<section class="hero">
+<section class="banner">
 
-<h2>Bem-vindo ao MovieLab</h2>
+    <article class="banner-texto">
 
-<p>
-Um site informativo dedicado ao universo dos filmes e séries.
-</p>
+        <h1>
+            Explore os maiores clássicos do cinema e da televisão
+        </h1>
 
-<button onclick="mensagem()">Explorar</button>
+        <p>
+            Descubra filmes e séries inesquecíveis através de um catálogo moderno e organizado.
+        </p>
+
+        <div class="botoes">
+            <a href="filmes.html" class="btn">Filmes</a>
+            <a href="series.html" class="btn-sec">Séries</a>
+        </div>
+
+    </article>
+
+</section>
+
+<section class="pesquisa">
+
+    <h2>Pesquisar</h2>
+
+    <input
+    type="text"
+    id="pesquisa"
+    placeholder="Pesquisar filme ou série...">
+
+</section>
+
+<section class="destaque">
+
+    <h2>Filmes em Destaque</h2>
+
+    <section class="cards">
+
+        <article class="card">
+            <img src="https://m.media-amazon.com/images/M/MV5BYTgwYzA2YTAtYzhkOS00MWJhLWI1ZGMtZGYyODFjNzljYzY5XkEyXkFqcGc@._V1_.jpg" alt="Benjamin Button">
+            <h3>Benjamin Button</h3>
+        </article>
+
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/3/3a/Interstellar_Filme.png/250px-Interstellar_Filme.png" alt="Interestelar">
+            <h3>Interestelar</h3>
+        </article>
+
+        <article class="card">
+            <img src="https://public-website-assets.paramountpictures.com/paramount2025/s3fs-public/styles/poster_medium/public/forrestgump_2019update_en_800x1200.jpg" alt="Forrest Gump">
+            <h3>Forrest Gump</h3>
+        </article>
+
+    </section>
+
+</section>
+
+<section class="destaque">
+
+    <h2>Séries em Destaque</h2>
+
+    <section class="cards">
+
+        <article class="card">
+            <img src="https://m.media-amazon.com/images/M/MV5BMmNjOWQzYmYtNGYxOS00MjVkLTg1MWUtMTkzMGE0MDgwNzQ5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Diários de um Vampiro">
+            <h3>Diários de um Vampiro</h3>
+        </article>
+
+        <article class="card">
+            <img src="https://m.media-amazon.com/images/I/611-9dU9LrS._AC_UF894,1000_QL80_.jpg" alt="O Mentalista">
+            <h3>O Mentalista</h3>
+        </article>
+
+        <article class="card">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg" alt="Breaking Bad">
+            <h3>Breaking Bad</h3>
+        </article>
+
+    </section>
+
+</section>
+
+<section class="sobre-home">
+
+    <h2>Sobre o MovieLab</h2>
+
+    <p>
+        O MovieLab é um catálogo digital criado para apresentar informações,
+        sinopses e recomendações de filmes e séries que marcaram gerações.
+    </p>
+
+    <a href="sobre.html" class="btn">
+        Saiba Mais
+    </a>
 
 </section>
 
 </main>
 
+<footer>
+
+    <p>
+        © 2026 MovieLab | Desenvolvido por Geovanna Araújo
+    </p>
+
+</footer>
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
