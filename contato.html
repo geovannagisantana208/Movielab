@@ -16,10 +16,10 @@
 
 <header>
 
-    <div class="logo">
+    <section class="logo">
         <i class="fa-solid fa-film"></i>
         <span>MovieLab</span>
-    </div>
+    </section>
 
     <nav>
         <a href="index.html">Início</a>
@@ -31,14 +31,12 @@
 
 </header>
 
-<main>
-
 <section class="pagina-topo">
 
-    <h1> Entre em Contato</h1>
+    <h1>Entre em Contato</h1>
 
     <p>
-        Tem alguma sugestão, dúvida ou recomendação? Fale conosco!
+        Tem alguma dúvida, sugestão ou comentário? Envie uma mensagem.
     </p>
 
 </section>
@@ -47,18 +45,18 @@
 
     <article class="bloco">
 
-        <h2>Envie sua mensagem</h2>
+        <h2>Fale Conosco</h2>
 
-        <form>
+        <form id="formulario">
 
             <input
             type="text"
-            placeholder="Digite seu nome"
+            placeholder="Seu nome"
             required>
 
             <input
             type="email"
-            placeholder="Digite seu e-mail"
+            placeholder="Seu e-mail"
             required>
 
             <textarea
@@ -70,38 +68,46 @@
                 Enviar Mensagem
             </button>
 
+            <p id="mensagem-sucesso"></p>
+
         </form>
-
-    </article>
-
-    <article class="bloco">
-
-        <h2>Informações</h2>
-
-        <p>
-            O MovieLab foi criado para reunir filmes e séries que marcaram gerações.
-        </p>
-
-        <p>
-            Entre em contato para enviar sugestões de novos títulos para o catálogo.
-        </p>
 
     </article>
 
 </section>
 
-</main>
-
 <footer>
 
     <p>
-        © 2026 MovieLab | Desenvolvido por Geovanna Araújo
+        © 2026 MovieLab - Todos os direitos reservados
     </p>
 
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const mensagem =
+    document.getElementById("mensagem-sucesso");
+
+    mensagem.innerHTML =
+    " Mensagem enviada com sucesso!";
+
+    mensagem.style.color = "#22c55e";
+    mensagem.style.fontWeight = "bold";
+    mensagem.style.fontSize = "18px";
+    mensagem.style.marginTop = "15px";
+
+    formulario.reset();
+
+});
+
+</script>
 
 </body>
-
 </html>

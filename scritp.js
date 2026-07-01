@@ -3,37 +3,72 @@ const pesquisa = document.getElementById("pesquisa");
 
 if (pesquisa) {
 
-    pesquisa.addEventListener("keyup", () => {
+    pesquisa.addEventListener("keydown", function(event) {
 
-        const filtro = pesquisa.value.toLowerCase();
+        if (event.key === "Enter") {
 
-        const cards = document.querySelectorAll(".card");
+            const valor = pesquisa.value.toLowerCase().trim();
 
-        cards.forEach(card => {
+             //FILMES
+            if (
+                valor.includes("benjamin") ||
+                valor.includes("interestelar") ||
+                valor.includes("forrest") ||
+                valor.includes("titanic") ||
+                valor.includes("milagre") ||
+                valor.includes("liberdade")
+            ) {
 
-            const titulo = card.querySelector("h3")
-            .textContent
-            .toLowerCase();
+                window.location.href = "filmes.html";
 
-            card.style.display =
-            titulo.includes(filtro)
-            ? "block"
-            : "none";
+            }
 
-        });
+            //SÉRIES
+            else if (
+                valor.includes("vampiro") ||
+                valor.includes("walking dead") ||
+                valor.includes("mentalista") ||
+                valor.includes("breaking bad") ||
+                valor.includes("friends") ||
+                valor.includes("game of thrones")
+            ) {
+
+                window.location.href = "series.html";
+
+            }
+
+            else {
+
+                alert("Título não encontrado!");
+
+            }
+
+        }
 
     });
 
 }
-const formulario = document.querySelector("form");
+const formulario = document.getElementById("formulario");
 
 if (formulario) {
 
-    formulario.addEventListener("submit", (event) => {
+    formulario.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        alert("Mensagem enviada com sucesso!");
+        const mensagem =
+        document.getElementById("mensagem-sucesso");
+
+        if (mensagem) {
+
+            mensagem.innerHTML =
+            "✅ Mensagem enviada com sucesso!";
+
+            mensagem.style.color = "#22c55e";
+            mensagem.style.fontWeight = "bold";
+            mensagem.style.marginTop = "15px";
+
+        }
 
         formulario.reset();
 
@@ -42,53 +77,38 @@ if (formulario) {
 }
 const header = document.querySelector("header");
 
-window.addEventListener("scroll", () => {
+if (header) {
 
-    if (window.scrollY > 50) {
+    window.addEventListener("scroll", function() {
 
-        header.style.background = "#0B1120";
+        if (window.scrollY > 50) {
 
-    } else {
+            header.style.background = "#0B1120";
 
-        header.style.background = "#111827";
+        } else {
 
-    }
+            header.style.background = "#111827";
 
-})
+        }
+
+    });
+
+}
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
 
-    card.addEventListener("mouseenter", () => {
+    card.addEventListener("mouseenter", function() {
 
         card.style.boxShadow =
         "0 10px 25px rgba(239,68,68,0.5)";
 
     });
 
-    card.addEventListener("mouseleave", () => {
+    card.addEventListener("mouseleave", function() {
 
         card.style.boxShadow =
         "0 5px 15px rgba(0,0,0,0.3)";
-
-    });
-
-});
-window.addEventListener("load", () => {
-
-    cards.forEach((card, index) => {
-
-        card.style.opacity = "0";
-        card.style.transform = "translateY(30px)";
-
-        setTimeout(() => {
-
-            card.style.transition = "0.5s";
-
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-
-        }, index * 150);
 
     });
 

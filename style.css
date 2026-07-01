@@ -9,9 +9,6 @@ body{
     background:#0f172a;
     color:white;
 }
-
-/* HEADER */
-
 header{
     background:#111827;
     display:flex;
@@ -44,9 +41,6 @@ nav a{
 nav a:hover{
     color:#ef4444;
 }
-
-/* BANNER */
-
 .banner{
     height:80vh;
     display:flex;
@@ -78,9 +72,6 @@ nav a:hover{
     font-size:20px;
     line-height:1.6;
 }
-
-/* BOTÕES */
-
 .btn,
 .btn-sec{
     display:inline-block;
@@ -109,9 +100,6 @@ nav a:hover{
 .btn-sec:hover{
     background:#ef4444;
 }
-
-/* PESQUISA */
-
 .pesquisa{
     padding:40px 8%;
     text-align:center;
@@ -128,9 +116,6 @@ nav a:hover{
     border:none;
     border-radius:8px;
 }
-
-/* TÍTULOS DAS PÁGINAS */
-
 .pagina-topo{
     text-align:center;
     padding:60px 20px;
@@ -146,9 +131,6 @@ nav a:hover{
     color:#cbd5e1;
     font-size:18px;
 }
-
-/* CATÁLOGOS */
-
 .catalogo{
     padding:40px 8%;
 }
@@ -160,9 +142,6 @@ nav a:hover{
 .destaque h2{
     margin-bottom:25px;
 }
-
-/* CARDS */
-
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -197,9 +176,6 @@ nav a:hover{
     color:#e2e8f0;
     line-height:1.6;
 }
-
-/* SOBRE HOME */
-
 .sobre-home{
     padding:60px 8%;
     text-align:center;
@@ -217,9 +193,6 @@ nav a:hover{
     color:#cbd5e1;
     margin-bottom:25px;
 }
-
-/* SOBRE E CONTATO */
-
 .sobre-conteudo{
     max-width:1000px;
     margin:auto;
@@ -258,9 +231,6 @@ nav a:hover{
     margin-bottom:10px;
     color:#e2e8f0;
 }
-
-/* FORMULÁRIO */
-
 form{
     margin-top:20px;
 }
@@ -289,9 +259,6 @@ button{
 button:hover{
     background:#dc2626;
 }
-
-/* FOOTER */
-
 footer{
     margin-top:50px;
     background:#111827;
@@ -299,9 +266,6 @@ footer{
     padding:25px;
     color:#94a3b8;
 }
-
-/* RESPONSIVO */
-
 @media(max-width:768px){
 
     header{
@@ -333,4 +297,58 @@ footer{
     .cards{
         grid-template-columns:1fr;
     }
+}
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .banner h1{
+        font-size:38px;
+    }
+
+    .banner p{
+        font-size:18px;
+    }
+
+    .pagina-topo h1{
+        font-size:32px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+.contato{
+    max-width:700px;
+    margin:50px auto;
+    padding:30px;
+}
+
+.contato form{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+#mensagem-sucesso{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+html{
+    scroll-behavior:smooth;
 }

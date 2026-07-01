@@ -16,10 +16,10 @@
 
 <header>
 
-    <div class="logo">
+    <section class="logo">
         <i class="fa-solid fa-film"></i>
         <span>MovieLab</span>
-    </div>
+    </section>
 
     <nav>
         <a href="index.html">Início</a>
@@ -31,11 +31,9 @@
 
 </header>
 
-<main>
-
 <section class="banner">
 
-    <article class="banner-texto">
+    <section class="banner-texto">
 
         <h1>
             Explore os maiores clássicos do cinema e da televisão
@@ -45,29 +43,32 @@
             Descubra filmes e séries inesquecíveis através de um catálogo moderno e organizado.
         </p>
 
-        <div class="botoes">
-            <a href="filmes.html" class="btn">Filmes</a>
-            <a href="series.html" class="btn-sec">Séries</a>
-        </div>
+        <a href="filmes.html" class="btn">
+            Ver Filmes
+        </a>
 
-    </article>
+        <a href="series.html" class="btn-sec">
+            Ver Séries
+        </a>
+
+    </section>
 
 </section>
 
 <section class="pesquisa">
 
-    <h2>Pesquisar</h2>
+    <h2> Pesquisar Filme ou Série</h2>
 
     <input
     type="text"
     id="pesquisa"
-    placeholder="Pesquisar filme ou série...">
+    placeholder="Digite um título e pressione Enter">
 
 </section>
 
 <section class="destaque">
 
-    <h2>Filmes em Destaque</h2>
+    <h2> Filmes em Destaque</h2>
 
     <section class="cards">
 
@@ -92,7 +93,7 @@
 
 <section class="destaque">
 
-    <h2>Séries em Destaque</h2>
+    <h2> Séries em Destaque</h2>
 
     <section class="cards">
 
@@ -120,8 +121,9 @@
     <h2>Sobre o MovieLab</h2>
 
     <p>
-        O MovieLab é um catálogo digital criado para apresentar informações,
-        sinopses e recomendações de filmes e séries que marcaram gerações.
+        O MovieLab foi criado para reunir filmes e séries clássicas em um único lugar.
+        A inspiração veio de plataformas de avaliação de filmes, permitindo ao usuário
+        descobrir grandes obras do cinema e da televisão.
     </p>
 
     <a href="sobre.html" class="btn">
@@ -130,18 +132,65 @@
 
 </section>
 
-</main>
-
 <footer>
 
     <p>
-        © 2026 MovieLab | Desenvolvido por Geovanna Araújo
+        © 2026 MovieLab - Todos os direitos reservados
     </p>
 
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+const pesquisa = document.getElementById("pesquisa");
+
+if (pesquisa) {
+
+    pesquisa.addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            let valor = pesquisa.value.toLowerCase().trim();
+
+            if (
+                valor.includes("benjamin") ||
+                valor.includes("interestelar") ||
+                valor.includes("forrest") ||
+                valor.includes("titanic") ||
+                valor.includes("milagre") ||
+                valor.includes("liberdade")
+            ) {
+
+                window.location.href = "filmes.html";
+
+            }
+
+            else if (
+                valor.includes("vampiro") ||
+                valor.includes("walking dead") ||
+                valor.includes("mentalista") ||
+                valor.includes("breaking bad") ||
+                valor.includes("friends") ||
+                valor.includes("game of thrones")
+            ) {
+
+                window.location.href = "series.html";
+
+            }
+
+            else {
+
+                alert("Título não encontrado!");
+
+            }
+
+        }
+
+    });
+
+}
+
+</script>
 
 </body>
-
 </html>
